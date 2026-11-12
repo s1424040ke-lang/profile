@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="cupcake" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ふぁの自己紹介ページ</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- daisyUI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="min-h-screen bg-base-100 text-base-content flex flex-col justify-between">
+
+  <!-- ナビバー (Navbar) -->
+  <header class="sticky top-0 z-50">
+    <div class="navbar bg-base-200 shadow-md px-6">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl font-bold" href="#">ふぁのページ</a>
+      </div>
+      <div class="flex-none hidden sm:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="#hitokoto">ひとこと</a></li>
+          <li><a href="#favorites">好きなもの</a></li>
+          <li><a href="#learning">最近学んでいること</a></li>
+          <li><a href="#works">作ったもの</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="flex-grow p-6 flex flex-col items-center gap-12 mt-4 mb-12">
+    
+    <!-- 1. ひとこと (Hero & Avatar) -->
+    <section id="hitokoto" class="hero bg-base-200 rounded-box shadow-xl max-w-4xl p-8 w-full">
+      <div class="hero-content text-center flex-col">
+        <!-- 画像の代わりにイニシャルのプレースホルダーを使用 -->
+        <div class="avatar placeholder mb-2">
+          <div class="bg-neutral text-neutral-content mask mask-squircle w-24">
+            <span class="text-3xl">ふ</span>
+          </div>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-2">こんにちは！<br>「ふぁ」です</h1>
+        <div class="divider">ひとこと</div>
+        <p class="text-2xl font-bold text-primary">
+          「Vibe codingってすごい。」
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. 好きなもの (Cards) -->
+    <section id="favorites" class="max-w-5xl w-full">
+      <h2 class="text-2xl font-bold text-center mb-6 text-gray-600">好きなもの</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+<!-- カード1：ゲーム（ミントグリーンになる） -->
+        <div class="card w-72 bg-base-100 shadow-xl border border-base-200 hover:bg-primary hover:text-primary-content transition-colors">
+          <div class="card-body items-center text-center">
+            <div class="text-6xl mb-2">🎮</div>
+            <h3 class="card-title">ゲーム</h3>
+            <p class="text-sm">ジャンル問わず遊びます。休日の最高の息抜きです。</p>
+          </div>
+        </div>
+
+        <!-- カード2：読書（ピンクになる） -->
+        <div class="card w-72 bg-base-100 shadow-xl border border-base-200 hover:bg-secondary hover:text-secondary-content transition-colors">
+          <div class="card-body items-center text-center">
+            <div class="text-6xl mb-2">📖</div>
+            <h3 class="card-title">読書</h3>
+            <p class="text-sm">新しい知識や、色々な世界に没入するのが好きです。</p>
+          </div>
+        </div>
+
+        <!-- カード3：料理（黄色になる） -->
+        <div class="card w-72 bg-base-100 shadow-xl border border-base-200 hover:bg-accent hover:text-accent-content transition-colors">
+          <div class="card-body items-center text-center">
+            <div class="text-6xl mb-2">🍳</div>
+            <h3 class="card-title">料理</h3>
+            <p class="text-sm">美味しいものを作って食べる時間が至福のひとときです。</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- 3 & 4. 最近学んでいること / 作ったもの (Grid & Colored Cards) -->
+    <section class="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- 3. 最近学んでいること -->
+      <div id="learning" class="card bg-secondary text-secondary-content shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title text-sm opacity-80 uppercase tracking-wider">最近学んでいること</h2>
+          <p class="text-2xl font-bold mt-2">⚠ 引き際は大事</p>
+        </div>
+      </div>
+
+      <!-- 4. この授業で作ったもの -->
+      <div id="works" class="card bg-accent text-accent-content shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title text-sm opacity-80 uppercase tracking-wider">この授業で作ったもの</h2>
+          <p class="text-xl font-bold mt-2">🛠️ daisyUI の自己紹介カード</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer footer-center p-4 bg-base-300 text-base-content text-sm">
+    <div>
+      <p>Copyright © 2026 - ふぁ</p>
+    </div>
+  </footer>
+
+</body>
+</html>
