@@ -48,36 +48,45 @@
       </div>
     </section>
 
-    <!-- 2. 好きなもの (Cards) -->
-    <section id="favorites" class="max-w-5xl w-full">
+<!-- 2. 好きなもの (Cards) -->
+    <section id="favorites" class="max-w-4xl w-full">
       <h2 class="text-2xl font-bold text-center mb-6 text-gray-600">好きなもの</h2>
-      <div class="flex flex-wrap justify-center gap-6">
-<!-- カード1：ゲーム（ミントグリーンになる） -->
-        <div class="card w-72 bg-base-100 shadow-xl border border-base-200 hover:bg-primary hover:text-primary-content transition-colors">
-          <div class="card-body items-center text-center">
-            <div class="text-6xl mb-2">🎮</div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        <!-- カード1：ゲーム（ミントグリーンになる） -->
+        <div class="card w-full bg-base-100 shadow-xl border border-base-200 hover:bg-primary hover:text-primary-content transition-colors">
+          <div class="card-body items-center text-center p-6">
+            <div class="text-5xl sm:text-6xl mb-2">🎮</div>
             <h3 class="card-title">ゲーム</h3>
             <p class="text-sm">ジャンル問わず遊びます。休日の最高の息抜きです。</p>
           </div>
         </div>
 
         <!-- カード2：読書（ピンクになる） -->
-        <div class="card w-72 bg-base-100 shadow-xl border border-base-200 hover:bg-secondary hover:text-secondary-content transition-colors">
-          <div class="card-body items-center text-center">
-            <div class="text-6xl mb-2">📖</div>
+        <div class="card w-full bg-base-100 shadow-xl border border-base-200 hover:bg-secondary hover:text-secondary-content transition-colors">
+          <div class="card-body items-center text-center p-6">
+            <div class="text-5xl sm:text-6xl mb-2">📖</div>
             <h3 class="card-title">読書</h3>
             <p class="text-sm">新しい知識や、色々な世界に没入するのが好きです。</p>
           </div>
         </div>
 
         <!-- カード3：料理（黄色になる） -->
-        <div class="card w-72 bg-base-100 shadow-xl border border-base-200 hover:bg-accent hover:text-accent-content transition-colors">
-          <div class="card-body items-center text-center">
-            <div class="text-6xl mb-2">🍳</div>
+        <div class="card w-full bg-base-100 shadow-xl border border-base-200 hover:bg-accent hover:text-accent-content transition-colors">
+          <div class="card-body items-center text-center p-6">
+            <div class="text-5xl sm:text-6xl mb-2">🍳</div>
             <h3 class="card-title">料理</h3>
             <p class="text-sm">美味しいものを作って食べる時間が至福のひとときです。</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- もっと見るボタンと趣味の段落 -->
+    <section class="max-w-4xl w-full flex flex-col items-center gap-4">
+      <button id="more-btn" type="button" class="btn btn-primary">もっと見る</button>
+      <p id="hobby-text" hidden class="bg-base-200 rounded-box p-6 shadow-md text-center max-w-2xl">
+        趣味は、休日にゲームの世界をじっくり探索したり、気になった小説を一気読みしたり、新しいレシピに挑戦して料理を作ることです。
+      </p>
     </section>
 
     <!-- 3 & 4. 最近学んでいること / 作ったもの (Grid & Colored Cards) -->
@@ -108,5 +117,14 @@
     </div>
   </footer>
 
+  <script>
+    const moreBtn = document.getElementById('more-btn'); // 「もっと見る」ボタンを取得する
+    const hobbyText = document.getElementById('hobby-text'); // 「趣味」の段落を取得する
+
+    moreBtn.addEventListener('click', () => { // ボタンをクリックしたときの処理を設定する
+      hobbyText.hidden = !hobbyText.hidden; // 趣味の段落の表示と非表示を切り替える
+      moreBtn.textContent = hobbyText.hidden ? 'もっと見る' : '閉じる'; // ボタンの文字を状態に合わせて変える
+    }); // クリック処理の登録を終える
+  </script>
 </body>
 </html>
